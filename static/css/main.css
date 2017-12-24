@@ -82,13 +82,75 @@ a:hover {
 /*coloured borders at top and bottom of the page*/
 
 .navbar.navbar-default {
-    border-top: var(--border-width) solid var(--accent);
+  border-top: var(--border-width) solid var(--accent);
+  height: 100px;
+  background-color: #EAD3EA;
+  border-color: #EAD3EA;
+}
+
+.navbar-header {
+  margin-left: 1% !important;
+  margin-bottom: 1% !important;
+}
+
+.navbar-brand {
+    max-width: 50%;
+    left: 0;
+    top: 0;
+    text-align: center;
 }
 
 footer {
     border-bottom: var(--border-width) solid var(--accent);
 }
 
-img {
-    max-width: 100%;
+u {
+  text-decoration: none;
+  border-bottom: 3px solid black;
 }
+
+a.MenuItems {
+  position: absolute;
+  top: 25px;
+  font-size: 12.5pt;
+}
+
+img.logo {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+  max-width: 50%;
+}
+
+img.pixel-footer {
+  position: relative;
+  top: 40px;
+}
+
+input[type=text] {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  font-size: 10pt;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 250px;
+    width: 100%;
+    background-color: #EAD3EA;
+    border-color: #EAD3EA;
+    color: #EAD3EA;
+    text-align: center;
+}
+
+p.copyright {
+  position: relative;
+  top: 205px;
+}
+

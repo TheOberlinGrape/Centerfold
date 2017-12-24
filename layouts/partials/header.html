@@ -32,30 +32,32 @@
 
                 <div class="navbar-header">
 
-                    <a class="navbar-brand visible-xs" href="#">{{ .Title }}</a>
+                  <a class="navbar-brand" href="#">
+                    <img class="logo" style="width:250px;" src="{{ .Site.BaseURL }}/media/logo.gif">
+                  </a>
+
 
                     <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                 </div>
 
                 <div class="collapse navbar-collapse">
 
-                    {{ if .Site.Menus.main }}
+                    {{ if .Site.Menus.icon }}
                         <ul class="nav navbar-nav">
-                            {{ range sort .Site.Menus.main }}
-                                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{ range sort .Site.Menus.icon }}
+                            <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
                             {{ end }}
                         </ul>
                     {{ end }}
 
-                    {{ if .Site.Menus.icon }}
+                    {{ if .Site.Menus.main }}
                         <ul class="nav navbar-nav navbar-right">
-                            {{ range sort .Site.Menus.icon }}
-                                <li class="navbar-icon"><a href="{{ .URL }}"><i class="fa fa-{{ .Name }}"></i></a></li>
+                            {{ range sort .Site.Menus.main }}
+                            <li><a class="MenuItems" href="{{ .URL }}"><strong><em><u>{{ .Name }}</u></em></strong></a></li>
                             {{ end }}
                         </ul>
                     {{ end }}
