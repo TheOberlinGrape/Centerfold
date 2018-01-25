@@ -122,9 +122,10 @@ img.logo {
   max-width: 50%;
 }
 
-img.pixel-footer {
+img.pixel {
   position: relative;
-  top: 40px;
+  top: 30px;
+  width: 60px;
 }
 
 input[type=text] {
@@ -154,3 +155,7 @@ p.copyright {
   top: 205px;
 }
 
+form.email-submission {
+  position: relative;
+  top: 30px
+}

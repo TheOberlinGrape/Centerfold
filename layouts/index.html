@@ -1,13 +1,28 @@
-{{ partial "header" . }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Grape: Coming Soon</title>
 
-<main>
-
-    <div class="intro">
-
-        <h2>{{ markdownify .Site.Params.Description }}</h2>
-
+    <!-- Simple styling for a simple page -->
+    <style>
+      img.pixel { position: absolute; left: 50%; top: 48%; width:120px; height:120px; margin-left: -60px; margin-top: -60px; }
+      html { background: #EAD3EA; font-family: '{{ .Site.Params.font }}', sans-serif;
+      }
+      #purple { color: #6024a5 }    
+      #red { color: #d30016 }
+      #message { position: absolute; left: 50%; top: 54%; margin-left:-85px; font-style:italic; }
+      
+    </style>
+    
+    <!-- Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}">
+  
+  </head>
+  <body>
+    <img class="pixel" alt="Pixel Grape" src="{{ .Site.BaseURL }}media/pixel-logo.png">
+    <div id="message">
+      <!-- The two spans here are to have different colors for the different words -->
+      <h2 id="purple"> <span id="purple">Coming</span> <span id="red">Soon </span></h2>
     </div>
-
-</main>
-
-{{ partial "footer" . }}
+  </body>
+</html>
