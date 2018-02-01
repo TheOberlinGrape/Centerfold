@@ -11,7 +11,7 @@
 -->
 
 <form method="POST" action="https://api.staticman.net/v2/entry/TheOberlinGrape/HugoSite/master/comments">
-  <input name="options[redirect]" type="hidden" value="https://localhost:1313/submit/main">
+  <input name="options[redirect]" type="hidden" value="{{ .Site.BaseURL }}/submit/main">
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   <input name="options[slug]" type="hidden" value="slug">
   <label><input name="fields[name]" type="text">Name</label>
