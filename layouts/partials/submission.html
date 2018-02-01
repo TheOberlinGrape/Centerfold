@@ -1,22 +1,9 @@
-<!--
 <form method="POST" action="https://api.staticman.net/v2/entry/TheOberlinGrape/HugoSite/master/article">
   <label><input name="fields[section]" type="text"> Section </label>
   <label><input name="fields[author]" type="text"> Contributor ID </label>
   <label><input name="fields[title]" type="text"> Title </label>
   <label><input name="fields[subtitle]" type="text"> Subtitle </label>
-  <!-- Todo: Implement tags 
+  <!-- Todo: Implement tags -->
   <label><textarea name="fields[content]"></textarea> Content </label>
   <button type="submit">Submit!</button>
-</form>
--->
-
-<form method="POST" action="https://api.staticman.net/v2/entry/TheOberlinGrape/HugoSite/master/comments">
-  <!-- input name="options[redirect]" type="hidden" value="{{ .Site.BaseURL }}/submit/main" -->
-  <!-- e.g. "2016-01-02-this-is-a-post" -->
-  <input name="options[slug]" type="hidden" value="slug">
-  <label><input name="fields[name]" type="text">Name</label>
-  <label><input name="fields[email]" type="email">E-mail</label>
-  <label><textarea name="fields[message]"></textarea>Message</label>
-  
-  <button type="submit">Go!</button>
 </form>
