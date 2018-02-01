@@ -1,15 +1,11 @@
-<div class="submission">
 
-  <form method="POST" action="https://api.staticman.net/v2/entry/TheOberlinGrape/HugoSite/master">
-    <input type="hidden" name="options[redirect]" value="{{ .Site.BaseURL }}{{ .RelPermalink }}">
-    <input type="hidden" name="options[entryId]" value="{{ .UniqueID }}">
-    <label><input name="fields[title]" type="text">Title</label>
-    <label><input name="fields[subtitle]" type="text">Subtitle</label>
-    <!-- Todo: Make the tags more dynamic -->
-    <label><input name="fields[tags]" type="text">Tags</label>
-    <label><textarea name="fields[content]"></textarea>Message</label>
-
-    <button type="submit">Submit</button>
-  </form>
-
+<main class="Site-Content">
+<div id="headings">
+  <div id="section"> {{ .Params.section }} </div>
+  <div id="header"> {{ .Params.header }} </div>
+  <div id="subheader"> {{ .Params.subheader }} </div>
+  {{ partial "contributor" . }}
+  <div id="article-header-img"> {{ partial "header-image" . }} </div>
+<div id="content"> {{ .Content }} </div>
 </div>
+</main>
