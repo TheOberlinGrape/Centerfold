@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-  padding-top: 0px;
+  padding-bottom: 0px;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -21,8 +21,15 @@ main {
 
 /*footer*/
 
+#copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 .copyright {
-    margin: 15px 0;
+  margin: 15px 0;
 }
 
 /*home page*/
@@ -40,6 +47,8 @@ main {
     color: #757575;
     font-size: 3vmin;
 }
+
+
 
 /*apply accent colour to links
 
@@ -99,6 +108,11 @@ a:hover {
   margin-bottom: 1% !important;
 }
 
+.navbar-right {
+  position: relative;
+  left: 70px;
+}
+
 .navbar-brand {
     max-width: 50%;
     left: 0;
@@ -125,7 +139,6 @@ img.logo {
 
 img.pixel {
   position: relative;
-  top: 30px;
   width: 60px;
 }
 
@@ -139,90 +152,104 @@ input[type=text] {
   box-sizing: border-box;
 }
 
+#content-wrapper {
+  position: relative;
+}
+
+#footer-wrapper {
+  height: 250px;
+  position: relative;
+  width: 100%;
+  background-color: #EAD3EA;
+  border-color: #EAD3EA;
+  color: #EAD3EA;
+  text-align: center;
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
-    height: 250px;
-    width: 100%;
-    background-color: #EAD3EA;
-    border-color: #EAD3EA;
-    color: #EAD3EA;
-    text-align: center;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+  height: 250px;
+}
+
+#footer-form
+{
+  position: relative;
+  top: 30px;
 }
 
 p.copyright {
   position: relative;
-  top: 30%;
 }
 
 form.email-submission {
   position: relative;
-  top: 30px
+  top: 0px
 }
 
 
 /* Article Page */
 #headings {
-  position: absolute;
-  padding-top: 100px;
-  width: 900px;
+  position: relative;
+  top: 50px;
+  left: 200px;
+  width: 40%;
+  text-align: left;
 }
 
 #header {
+  position: relative;
+  left: 0px;
   font-size: 26pt;
   font-style: italic;
   font-weight: bolder;
-  position: absolute;
-  top: 200px;
-  left: 200px;
 }
 
 #subheader {
+  position: relative;
+  left: 0;
+  top: 0px;
   color: #808080;
   font-size: 16pt;
   font-style: italic;
-  position: absolute;
-  top: 245px;
-  left: 200px;
 }
 
-
-#content {
-  padding-top: 500px;
+#section {
+  color: #d30016;
+  position: relative;
+  left: 0px;
+  font-weight: lighter;
+  font-style: italic;
 }
 
 #contributor {
-  position: absolute;
-  top: 270px;
-  left: 200px;
+  position: relative;
+  top: 0px;
 }
 
 img.author-picture {
   position: relative;
   padding-top: 10px;
   padding-bottom: 10px;
-  left: -190px;
   width: 50px;
   clip-path: circle(25px at center);
 }
 
 #byline {
+  position: relative;
+  left: 0px;
   color: #808080;
   font-style: italic;
   font-size: 12pt;
 }
 
 #article-header-img {
-  position: absolute;
-  top: 390px;
-  left: 200px;
+  position: relative;
+  top: 0px;
 }
 
 #img-info {
-  position: absolute;
+  position: relative;
   padding-top: 10px;
+  top: 10px;
   font-style: italic;
   font-weight: lighter;
   color: #808080;
@@ -232,18 +259,21 @@ img.author-picture {
 
 img.header-img {
   position: relative;
+  top: 10px;
   width: 700px;
   height: 400px;
   border: 1pt solid black;
 }
 
 #content {
-  position: absolute;
+  position: relative;
   font-size: 12pt;
   width: 700px;
   left: 200px;
-  top: 350px;
+  top: 70px;
   text-align: left;
+  padding-bottom: 200px;
+  padding-top: 25px;
 }
 
 a.social-test {

@@ -26,6 +26,7 @@
     
     <body>
           {{ partial "body-open" . }}
+          <header>
           <nav class="navbar navbar-default navbar-static-top">
 
             <div class="container">
@@ -57,13 +58,23 @@
                     {{ if .Site.Menus.main }}
                         <ul class="nav navbar-nav navbar-right">
                             {{ range sort .Site.Menus.main }}
-                            <li><a class="MenuItems" href="{{ .URL }}"><strong><em><u>{{ .Name }}</u></em></strong></a></li>
+                            <li><a class="MenuItems" href="{{ .URL }}" ><strong><em style="color: black; text-decoration: none; border-bottom: 5px solid #{{ .Pre }}">{{ .Name }}</em></strong></a></li>
                             {{ end }}
+                            <li class="nav-item dropdown">
+                              <a style="color: black; text-decoration: none; border-bottom: 5px solid #f2f623" class="nav-link dropdown-toggle MenuItems"  href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <strong><em> More </em></strong>
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </li>
                         </ul>
-                    {{ end }}
-
+                        {{ end }}
                 </div>
 
             </div>
 
         </nav>
+</header>

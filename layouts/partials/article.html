@@ -1,11 +1,10 @@
 
-<main class="Site-Content">
 <div id="headings">
-  <div id="section"> {{ .Params.section }} </div>
+  <div id="section"> <a style="color: #d30016;" href="{{ .Site.BaseURL }}/post/{{ .Params.sectionid }}">{{ .Params.section }}</a> </div>
   <div id="header"> {{ .Params.header }} </div>
-  <div id="subheader"> {{ .Params.subheader }} </div>
+  <div id="subheader"> {{ .Params.subheader }}</div>
   {{ partial "contributor" . }}
   <div id="article-header-img"> {{ partial "header-image" . }} </div>
-<div id="content"> {{ .Content }} </div>
 </div>
-</main>
+<div id="content"> {{ .Content }} </div>
+
