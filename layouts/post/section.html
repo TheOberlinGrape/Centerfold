@@ -1,0 +1,13 @@
+{{ partial "header" . }}
+
+<main>
+  
+  <img id="banner" alt="bad-habits banner" src="{{ .Site.BaseURL }}/media/banners/{{ .Title }}.gif">
+  
+    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "footer" . }}

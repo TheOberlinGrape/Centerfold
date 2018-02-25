@@ -1,0 +1,13 @@
+{{ partial "header" . }}
+
+<main>
+  okokko
+  <img id="banner" alt="bad-habits banner" src="{{ .Site.BaseURL }}/media/banners/{{ .Params.sectionid }}.gif" style="width: 100%">
+  
+    {{ range (.Paginator 5).Pages }} {{ partial "list-item" . }} {{ end }}
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "footer" . }}

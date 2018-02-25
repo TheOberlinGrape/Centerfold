@@ -1,0 +1,41 @@
+{{ partial "header" . }}
+
+<main>
+
+  <div id="banner">
+    <img class="banner" alt="{{ .Params.sectionid }}.gif" src="{{ .Site.BaseURL }}/media/banners/{{ .Params.sectionid }}.gif" >
+  </div>
+  
+  <div id="features">
+    <img class="label-center top-stories-label" alt="Top Stories Label" src="{{ .Site.BaseURL }}/media/labels/top_stories@2x.png">
+    {{ range where (where .Site.Pages ".Params.sectionid" .Params.sectionid ) ".Params.featured" "true" }}
+    {{ if eq (mod .Weight 2) 1 }}
+    {{ partial "peek-medium-left" . }}
+    {{ end }}
+    {{ if eq (mod .Weight 2) 0 }}
+    {{ partial "peek-medium-right" . }}
+    {{ end }}
+    {{ end }}
+  </div>
+  
+  <span class="section-latest-posts">
+    <img class="label-left latest-label" alt="Latest Posts Banner" src="{{ .Site.BaseURL }}/media/labels/the_latest@2x.png">
+    {{ range first 10 (where (where .Site.Pages ".Params.sectionid" .Params.sectionid) ".Params.featured" "false") }}
+    {{ partial "peek-small" . }}
+    {{ end }}
+  </span>
+  <span id="section-submit-box-wrapper">
+    <div id="submit-box">
+      <div id="submit-title">Submit Work</div>
+      <div id="submit-text">{{ .Site.Params.submissionBoxMessage }}</div>
+      <div id="email-submission-wrapper">
+        {{ partial "email-subscribe" . }}
+        </div>
+    </div>
+  </span>
+
+</main>
+
+{{ partial "paginator" . }}
+
+{{ partial "footer" . }}

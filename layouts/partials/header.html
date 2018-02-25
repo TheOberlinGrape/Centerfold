@@ -9,7 +9,9 @@
         {{ if .RSSLink }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+        <link href="{{ .Site.BaseURL }}/media/{{ .Site.Params.favicon }}" rel="icon" >
         {{ end }}
+
         
         {{ if .Site.GoogleAnalytics }}
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -33,7 +35,7 @@
 
                 <div class="navbar-header">
 
-                  <a class="navbar-brand" href="#">
+                  <a class="navbar-brand" href="{{ .Site.BaseURL }}">
                     <img class="logo" style="width:250px;" src="{{ .Site.BaseURL }}/media/logo.gif">
                   </a>
 
@@ -61,13 +63,12 @@
                             <li><a class="MenuItems" href="{{ .URL }}" ><strong><em style="color: black; text-decoration: none; border-bottom: 5px solid #{{ .Pre }}">{{ .Name }}</em></strong></a></li>
                             {{ end }}
                             <li class="nav-item dropdown">
-                              <a style="color: black; text-decoration: none; border-bottom: 5px solid #f2f623" class="nav-link dropdown-toggle MenuItems"  href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               <strong><em> More </em></strong>
+                              <a style="color: black;"  class="MenuItems nav-link dropdown-toggle"  href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               <strong><em> More </em></strong> <div class="arrow-down"></div>
                               </a>
-                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="top: 60px;">
+                                <div><a class="dropdown-item" href="#">Contact Us</a></div>
+                                <div><a class="dropdown-item" href="#">Staff</a></div>
                               </div>
                             </li>
                         </ul>

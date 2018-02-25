@@ -1,6 +1,7 @@
 
 html, body {
   height: 100%;
+  max-width: 100%;
 }
 
 body {
@@ -15,8 +16,9 @@ main {
   margin: 0;
   padding-bottom: 250px;
   flex: 0 0 auto;
-  max-width: 750px;
-  left: 0
+  max-width: 100%;
+  left: 0;
+  align-content: center;
 }
 
 /*footer*/
@@ -130,6 +132,13 @@ a.MenuItems {
   font-size: 12.5pt;
 }
 
+a.MenuItemsDropdown {
+  position: absolute;
+  top: 25px;
+  line-height: 0.5;
+  font-size: 12.5pt;
+}
+
 img.logo {
   position: absolute;
   left: 10px;
@@ -180,10 +189,6 @@ p.copyright {
   position: relative;
 }
 
-form.email-submission {
-  position: relative;
-  top: 0px
-}
 
 
 /* Article Page */
@@ -191,7 +196,7 @@ form.email-submission {
   position: relative;
   top: 50px;
   left: 200px;
-  width: 40%;
+  width: 45%;
   text-align: left;
 }
 
@@ -278,4 +283,301 @@ img.header-img {
 
 a.social-test {
   color: #808080;
+}
+
+/* Section Pages */
+#banner {
+  position: relative;
+  width: 100%;
+}
+
+img.banner {
+  width: 100%;
+}
+
+#preview-left {
+  position: relative;
+  left: -24.5%;
+}
+
+#text-right {
+  position: relative;
+  text-align: right;
+  bottom: 225px;
+  right: 5%;
+}
+
+#header-preview {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 24pt;
+  position: relative;
+  bottom: 100px;
+  left: 60%;
+  width: 40%;
+}
+
+#subheader-preview {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 16pt;
+  color: grey;
+  position: relative;
+  bottom: 100px;
+  left: 60%;
+  width: 40%;
+}
+
+#content-preview {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 12pt;
+  position: relative;
+  bottom: 100px;
+  left: 55%;
+  width: 45%;
+  max-height: 250px;
+}
+
+img.preview-medium {
+  width: 612.5px;
+  height: 350px;
+}
+
+#peek-medium-left {
+  position: relative;
+  height: 350px;
+  max-height: 400px;
+  margin-bottom: 50px;
+}
+
+#peek-medium-right {
+  position: relative;
+  height: 350px;
+  max-height: 400px;
+  margin-bottom: 50px;
+  width: 91%;
+  left: 4%;
+}
+
+#preview-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#text-left {
+  position: absolute;
+  text-align: left;
+  top: 30%;
+  left: 0%;
+  width: 45%
+}
+
+#header-preview-left {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 24pt;
+  position: relative;
+  bottom: 100px;
+  width: 100%;
+}
+
+#subheader-preview-left {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 16pt;
+  color: grey;
+  position: relative;
+  bottom: 103px;
+  width: 100%;
+}
+
+#content-preview-left {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 12pt;
+  position: relative;
+  bottom: 97px;
+  width: 45%;
+  max-height: 250px;
+}
+
+#preview-date {
+  position: relative;
+  bottom: 95px;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 10pt;
+  color: grey;
+  padding-bottom: 5px;
+}
+
+.date-left {
+  left: 5px;
+}
+
+.date-right {
+  right: 5px;
+}
+
+img.label-left {
+  position: relative;
+  left: -31%;
+}
+
+.latest-label {
+  width: 30%
+}
+
+.top-stories-label {
+  width: 20%;
+  padding-bottom: 40px;
+}
+
+.label-center {
+  position: relative;
+}
+
+.arrow-down {
+  position: relative;
+  top: 2px;
+  right: -1px;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-top: 10px solid #f2f623;
+}
+
+/* Smaller Previews */
+#peek-small {
+  width: 50%;
+  position: relative;
+  left: 4%;
+  height: 200px;
+  padding-top: 20px;
+}
+
+img.preview-small {
+  position: relative;
+  left: -29%;
+  width: 300px;
+  height: 171.42px;
+}
+
+#text-left-small {
+  width:30%;
+  text-align: left;
+  position: relative;
+  left: 50%;
+  bottom: 165px;
+}
+
+#header-preview-right-small {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 16pt;
+  width: 50%;
+}
+
+#subheader-preview-right-small {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 12pt;
+  color: grey;
+  width: 60%;
+}
+
+#content-preview-right-small {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 10pt;
+  position: relative;
+  width: 60%;
+  max-height: 250px;
+}
+
+#preview-date-small {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 10pt;
+  color: grey;
+}
+
+/* Submit Box */
+#section-submit-box-wrapper {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 220px;
+  left: 50%;
+  width: 45%;
+  bottom: 170px;
+}
+
+#submit-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 220px;
+  background: #fda6d4;
+  text-align: left;
+}
+
+#submit-title {
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 16pt;
+  position: relative;
+  left: 5%;
+  top: 8%;
+}
+
+#submit-text {
+  position: relative;
+  top: 0;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 10pt;
+  position: relative;
+  width: 85%;
+  left: 5%;
+  top: 16%;
+}
+
+#email-submission-wrapper {
+  position: absolute;
+  top: 70%;
+  left: 5%
+}
+
+/* Email input styling */
+#subscribe-button {
+  display: block;
+  position: absolute;
+  width: 52px;
+  height: 35px;
+  background: purple;
+  bottom: 10px;
+  left: 150px;
+  color: white;
+  text-align: center;
+  font-size: 8pt;
+  border: none;
+  border-radius: 0;
+}
+
+#submit-label {
+  position: relative;
+  top: 6px;
+  left: -1.5px;
+}
+
+form.email-submission {
+  position: relative;
+  top: 0px;
+  outline: none;
 }

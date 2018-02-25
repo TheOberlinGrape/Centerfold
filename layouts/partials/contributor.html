@@ -1,5 +1,5 @@
 <!-- The Contributor's information -->
 <div id="contributor">
   <img class="author-picture" alt="Author Photo" src="{{ .Site.BaseURL }}media/contributors/{{ ( index .Site.Data.contributors .Params.contributor ).picture }}" >
-  <div id="byline">By {{ ( index .Site.Data.contributors .Params.contributor ).name }} / <a class="social-text" href="https://www.{{ .Params.social }}.com/{{ (index .Site.Data.contributors .Params.contributor ).social }}"> @{{ ( index .Site.Data.contributors .Params.contributor ).social }} </a> / {{ .Params.formattedDate }} / {{ .Params.time }} </div>
+  <div id="byline">By {{ ( index .Site.Data.contributors .Params.contributor ).name }} / <a class="social-text" href="mailto:{{ (index .Site.Data.contributors .Params.contributor ).social }}"> {{ ( index .Site.Data.contributors .Params.contributor ).social }} </a> / {{ .Params.formattedDate }} / {{ .Params.time }} </div>
 </div>
