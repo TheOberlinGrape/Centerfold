@@ -1,9 +1,14 @@
-
 <footer>
   <div id="footer-wrapper">
-    <div qid="footer-form">
+    <div id="footer-form">
       <img alt="Pixel Logo" class="pixel"  src="{{.Site.BaseURL}}/media/pixel-logo.png" >
-      <form class="email-submission"><input  type="text" id="email" placeholder="Email Address..."></form>
+      <div id="email-subscribe-footer">
+        <span id="email-form">
+          <form class="email-submission"
+                id="submission-emails" name="submission-emails" netlify><input  type="text" id="email" placeholder="Email Address..."></form>
+        </span>
+        <span><button id="subscribe-button" type="submit" form="submission-emails"><p id="submit-label">Submit</p></span>
+      </div>
     </div>
     <div id="copyright">
       <p class="copyright text-muted">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by [Hugo](https://gohugo.io) andx [Minimal](https://github.com/calintat/minimal)" | markdownify }}</p>

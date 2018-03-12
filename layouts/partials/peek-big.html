@@ -1,0 +1,25 @@
+<div id="peek-big" {{ if isset .Params "header_image" }} class="PeekBigWithImage" {{ end }} {{ if not (isset .Params "header_image" )}} class="PeekBigWithoutImage" {{ end }}>
+  {{ if isset .Params "header_image" }}
+  <span id="preview-big"><a href="{{ .URL }}"> <img class="preview-big" alt="Preview Image" src="{{ .Site.BaseURL }}/media/{{ .Params.issueid }}/{{ .Params.header_image }}"> </a></span>
+  {{ end }}
+  <span id="text-big" {{ if isset .Params "header_image" }} class="textBigWithImage" {{ end }} {{ if not (isset .Params "header_image" )}} class="textBigWithoutImage" {{ end }}>
+    <div id="header-preview-big">
+      <a style="color: black;"href="{{ .URL }}">{{ .Params.header }}</a>
+    </div>
+    <div id="subheader-preview-big">
+      {{ .Params.subheader }}
+    </div>
+        <div id="preview-date-big" class="date-big">
+      {{ .Params.formattedDate }} | By {{ ( index .Site.Data.contributors .Params.contributor ).name }} 
+    </div>
+    <div id="content-preview-big" {{ if isset .Params "header_image" }} class="withBigImage" {{ end }} {{ if not (isset .Params "header_image") }} class="withoutBigOBImage" {{ end }}>
+      {{ if isset .Params "header_image" }} 
+      {{ substr .Content 0 430 | markdownify }}
+      {{ end }}
+      {{ if not (isset .Params "header_image") }}
+      {{ substr .Content 0 1000 | markdownify }}
+      {{ end }}
+      <a id="section" href="{{ .URL }}">Read More</a>
+    </div>
+  </span>
+</div>

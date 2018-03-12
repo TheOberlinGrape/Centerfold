@@ -1,6 +1,5 @@
 <div id="peek-small">
-  <span id="preview-left-small"><a href="{{ .URL }}"> <img class="preview-small" alt="Preview Image" src="{{ .Site.BaseURL }}/media/{{ .Params.issueid }}/{{ .Params.header_image }}"> </a></span>
-  <span id="text-left-small">   
+  <span id="text-left-small" class="withoutImageSmall">   
     <div id="preview-date-small" class="date-left">
       {{ .Params.formattedDate }}
     </div>
@@ -11,7 +10,7 @@
       {{ .Params.subheader }}
     </div>
     <div id="content-preview-right-small">
-      {{ substr .Content 0 100 | markdownify }} <a id="section"  href="{{ .URL }}">Read More</a>
+      {{ print ( substr .Content 0 200 )  "..." | markdownify }} <a id="section"  href="{{ .URL }}">Read More</a>
     </div>
   </span>
 </div>

@@ -1,5 +1,5 @@
-<div id="peek-medium-right">
-  <span id="text-left">   
+<div id="peek-medium-right" >
+  <span id="text-left" {{ if isset .Params "header_image" }} class="textWithImageRight" {{ end }}>   
     <div id="preview-date" class="date-left">
       {{ .Params.formattedDate }}
     </div>
@@ -9,9 +9,11 @@
     <div id="subheader-preview-left">
       {{ .Params.subheader }}
     </div>
-    <div id="content-preview-left">
+    <div id="content-preview-left" {{ if isset .Params "header_image" }} class="withImageLeft" {{ end }} {{ if not (isset .Params "header_image") }} class="withoutImageLeft" {{ end }}>
       {{ substr .Content 0 550 | markdownify }} <a id="section"  href="{{ .URL }}">Read More</a>
     </div>
   </span>
+  {{ if isset .Params "header_image" }}
   <span id="preview-right"><a href="{{ .URL }}"> <img class="preview-medium" alt="Preview Image" src="{{ .Site.BaseURL }}/media/{{ .Params.issueid }}/{{ .Params.header_image }}"> </a></span>
+  {{ end }}
 </div>

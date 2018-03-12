@@ -1,0 +1,35 @@
+<main>
+  <div id="frontpage">
+  <img class="frontpage_label" alt="frontpage" src="{{ .Site.BaseURL }}/media/labels/featured_stories@2x.png">
+  <div id="frontpage_big">
+    {{ range first 1 (where .Site.Pages ".Params.frontpage" "feature") }}
+    {{ partial "peek-big" . }}
+    {{ end }}
+  </div>
+  <div id="frontpage_med">
+    {{ range $index, $element := first 4 (where .Site.Pages ".Params.frontpage" "subfeature") }}
+    {{ if eq (mod $index 2) 0 }}
+    {{ partial "peek-medium-right" . }}
+    {{ end }}
+    {{ if eq (mod $index 2) 1 }}
+    {{ partial "peek-medium-left" . }}
+    {{ end }}
+      {{ end }}
+  </div>
+  <span id="section-submit-box-wrapper">
+    <div id="submit-box">
+      <div id="submit-title">Join the Team!</div>
+      <div id="submit-text">{{ .Site.Params.submissionBoxMessage }}</div>
+      <div id="email-submission-wrapper">
+        {{ partial "email-subscribe" . }}
+      </div>
+    </div>
+  </span>
+  <span class="section-latest-posts">
+    <img class="label-left latest-label" alt="Latest Posts Banner" src="{{ .Site.BaseURL }}/media/labels/the_latest@2x.png">
+    {{ range first 10 (where .Site.Pages ".Params.featured" false) }}
+    {{ partial "peek-small" . }}
+    {{ end }}
+  </span>
+</div>
+</main>

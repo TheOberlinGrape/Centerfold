@@ -1,6 +1,8 @@
-<div id="peek-medium-left">
-  <span id="preview-left"><a href="{{ .URL }}"> <img class="preview-medium" alt="Preview Image" src="{{ .Site.BaseURL }}/media/{{ .Params.issueid }}/{{ .Params.header_image }}"> </a></span>
-  <span id="text-right">
+<div id="peek-medium-left" {{ if isset .Params "header_image" }} class="PeekMedLeftWithImage" {{ end }} {{ if not (isset .Params "header_image" )}} class="PeekMedLeftWithoutImage" {{ end }}>
+{{ if isset .Params "header_image" }}
+ <span id="preview-left"><a href="{{ .URL }}"> <img class="preview-medium" alt="Preview Image" src="{{ .Site.BaseURL }}/media/{{ .Params.issueid }}/{{ .Params.header_image }}"> </a></span>
+{{ end }}
+ <span id="text-right" {{ if isset .Params "header_image" }} class="textWithImage" {{ end }} {{ if not (isset .Params "header_image" )}} class="textWithoutImage" {{ end }}>
     <div id="preview-date" class="date-right">
       {{ .Params.formattedDate }}
     </div>
@@ -10,7 +12,7 @@
     <div id="subheader-preview">
       {{ .Params.subheader }}
     </div>
-    <div id="content-preview">
+    <div id="content-preview" {{ if isset .Params "header_image" }} class="withImageRight" {{ end }} {{ if not (isset .Params "header_image") }} class="withoutImageRight" {{ end }}>
       {{ substr .Content 0 550 | markdownify }} <a id="section" href="{{ .URL }}">Read More</a>
     </div>
   </span>

@@ -4,7 +4,9 @@
   <div id="header"> {{ .Params.header }} </div>
   <div id="subheader"> {{ .Params.subheader }}</div>
   {{ partial "contributor" . }}
+{{ if isset .Params "header_image" }}
   <div id="article-header-img"> {{ partial "header-image" . }} </div>
+{{ end }}
 </div>
 <div id="content"> {{ .Content }} </div>
 

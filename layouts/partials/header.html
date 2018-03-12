@@ -9,9 +9,9 @@
         {{ if .RSSLink }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-        <link href="{{ .Site.BaseURL }}/media/{{ .Site.Params.favicon }}" rel="icon" >
         {{ end }}
-
+        <link href="{{ .Site.BaseURL }}/media/{{ .Site.Params.favicon }}" rel="icon" >
+      
         
         {{ if .Site.GoogleAnalytics }}
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -67,8 +67,8 @@
                                <strong><em> More </em></strong> <div class="arrow-down"></div>
                               </a>
                               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="top: 60px;">
-                                <div><a class="dropdown-item" href="#">Contact Us</a></div>
-                                <div><a class="dropdown-item" href="#">Staff</a></div>
+                                <div><a class="dropdown-item" href="mailto:thegrape@oberlin.edu">Contact Us</a></div>
+                                <div><a class="dropdown-item" href="{{ .Site.BaseURL }}/media/staffpage.pdf">Staff</a></div>
                               </div>
                             </li>
                         </ul>
